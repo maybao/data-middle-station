@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xtsoft.datamiddlestation.module.log.mapper.LogMapper">
+    <insert id="insertLog">
+        insert into error_log(`current_time`, response_time, url, parameter, msg)
+            values (#{log.currentTime}, #{log.responseTime}, #{log.url}, #{log.parameter}, #{log.msg})
+    </insert>
+    <select id="selectOne" resultType="com.xtsoft.datamiddlestation.module.log.entity.LogEntity">
+        SELECT * FROM error_log t WHERE t.id = #{id};
+    </select>
+</mapper>
