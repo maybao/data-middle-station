@@ -1,6 +1,7 @@
 package com.xtsoft.datamiddlestation.module.log.mapper;
 
 import com.xtsoft.datamiddlestation.module.log.entity.LogEntity;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -8,6 +9,7 @@ import org.apache.ibatis.annotations.Param;
  * @author May
  * @date 2021/07/20 9:52
  */
+@Mapper
 public interface LogMapper {
     /**
      * 保存日志
